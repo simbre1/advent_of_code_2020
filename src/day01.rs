@@ -1,7 +1,7 @@
 use std::collections::*;
 
 pub fn solve() {
-    let input = std::fs::read_to_string("day01/input.txt").expect("peut");
+    let input = std::fs::read_to_string("input/day01/input.txt").expect("peut");
 
     let mut nums: BTreeSet<i64> = BTreeSet::new();
 
