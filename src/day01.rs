@@ -1,6 +1,9 @@
+#![allow(dead_code)]
 use std::collections::*;
 
 pub fn solve() {
+    println!("Day 01");
+
     let input = std::fs::read_to_string("input/day01/input.txt").expect("peut");
 
     let mut nums: BTreeSet<i64> = BTreeSet::new();

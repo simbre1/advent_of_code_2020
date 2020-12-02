@@ -1,9 +1,8 @@
-use std::println;
-
 mod day01;
+mod day02;
+mod aoc;
 
 fn main() {
-    println!("Hello, world!");
-
-    day01::solve();
+    //day01::solve();
+    day02::solve();
 }
