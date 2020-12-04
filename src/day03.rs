@@ -1,4 +1,4 @@
-
+#![allow(dead_code)]
 pub fn solve() {
     println!("Day 03");
 
