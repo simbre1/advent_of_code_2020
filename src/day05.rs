@@ -19,6 +19,7 @@ pub fn solve() {
     for i in 2..taken.len() {
         if taken[i-2] && !taken[i-1] && taken[i] {
             println!("empty seat: {}", i-1);
+            break;
         }
     }
 }
