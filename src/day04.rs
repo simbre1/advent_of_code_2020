@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use std::collections::HashMap;
 use phf::{phf_map};
 use regex::Regex;
