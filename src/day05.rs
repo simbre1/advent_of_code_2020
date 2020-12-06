@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use super::aoc;
 
 pub fn solve() {
@@ -5,7 +6,7 @@ pub fn solve() {
 
     let input = std::fs::read_to_string("input/day05/input.txt").expect("peut");
 
-    let mut taken = [false; 1024]; //[false; u32::pow(2, 10) as usize];
+    let mut taken = [false; 1024]; //[false; 2u32.pow(10) as usize];
 
     let max = input.lines()
         .into_iter()
