@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub fn solve() {
     println!("Day 06");
 
@@ -20,7 +21,7 @@ pub fn solve() {
         let n = block.lines().count();
         sum2 += arr.iter().filter(|a| **a == n).count();
     }
-    
+
     println!("sum: {}", sum);
     println!("sum2: {}", sum2);
 }
