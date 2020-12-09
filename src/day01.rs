@@ -22,7 +22,7 @@ fn solve_impl(nums: &BTreeSet<i64>, split: i64, into: u8) {
     println!("parts: {}, product: {}", format!("{:?}", result), product);
 }
 
-fn find(nums: &BTreeSet<i64>, split: i64, into: u8) -> Vec<i64> {
+pub fn find(nums: &BTreeSet<i64>, split: i64, into: u8) -> Vec<i64> {
     let mut result: Vec<i64> = Vec::new();
     if into > 1 {
         for num in nums.range(..split) {

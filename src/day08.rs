@@ -12,7 +12,7 @@ struct RunResult {
 }
 
 pub fn solve() {
-    println!("Day0 8");
+    println!("Day 08");
 
     let input = std::fs::read_to_string("input/day08/input.txt").expect("peut");
     let ops: Vec<IntOp> = input.lines()
