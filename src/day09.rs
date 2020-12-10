@@ -17,6 +17,8 @@ pub fn solve() {
     let parts = find_contiguous_parts(&nums, x);
     let sum = parts.iter().min().unwrap() + parts.iter().max().unwrap();
     println!("part 2: {} <- {}", sum, format!("{:?}", parts));
+
+    //556543474 76096372
 }
 
 fn part1(nums: &Vec<i64>, preamble: usize) -> i64 {
@@ -42,10 +44,19 @@ fn find_contiguous_parts(nums: &[i64], split: i64) -> &[i64] {
     while i < nums.len() && j < nums.len() {
         if sum < split {
             j += 1;
-            sum += nums[j];
+            if nums[j] >= split {
+                i = j;
+                sum = nums[i];
+            } else {
+                sum += nums[j];
+            }
         } else if sum > split {
             sum -= nums[i];
             i += 1;
+            if i > j {
+                j = i;
+                sum = nums[i];
+            }
         } else {
             break;
         }
