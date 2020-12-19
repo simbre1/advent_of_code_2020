@@ -1,6 +1,8 @@
 #![allow(dead_code)]
 use super::aoc;
 
+type P = aoc::P2D<i32>;
+
 pub fn solve() {
     println!("Day 05");
 
@@ -25,7 +27,7 @@ pub fn solve() {
     }
 }
 
-fn decode(bp: &str) -> aoc::P2D {
+fn decode(bp: &str) -> P {
     let row = isize::from_str_radix(
         &bp[0..7]
             .replace("F", "0")
@@ -41,6 +43,6 @@ fn decode(bp: &str) -> aoc::P2D {
     return aoc::P2D {x: row as i32, y: col as i32};
 }
 
-fn to_seat_id(seat: aoc::P2D) -> u32 {
+fn to_seat_id(seat: P) -> u32 {
     return (seat.x * 8 + seat.y) as u32;
 }
