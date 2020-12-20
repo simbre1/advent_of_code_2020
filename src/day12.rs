@@ -1,4 +1,4 @@
-//#![allow(dead_code)]
+#![allow(dead_code)]
 
 type N = f32;
 type P = super::aoc::P2D<N>;
